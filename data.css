@@ -1,0 +1,62 @@
+/* sticky header - https://tympanus.net/Tutorials/StickyTableHeaders/index3.html */
+/* convert CSV to html - http://bl.ocks.org/ndarville/7075823 */
+
+div {
+    max-width: 1200px;
+    max-height: 800px;
+    /*overflow: scroll;*/
+    position: relative;
+
+}
+
+table {
+    margin-top: -2px;
+    position: relative;
+    border-collapse: collapse;
+}
+
+tr:first-child > td {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    background: lightgray;
+}
+
+tr:first-child > td:first-child {
+    left: 0;
+    z-index: 1;
+}
+
+tr:not(:first-child) > td:first-child { /* tbody th */
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    left: 0;
+    background: lightgray;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 12px sans-serif;
+}
+
+td {
+    border: 1px black solid;
+    padding: 5px;
+}
+
+.yellow {
+    background: #e8e872;
+}
+
+.blue {
+    background: #9898f3;
+}
+
+.red {
+    background: #e67171;
+}
+
+.green {
+    background: #8ce48c;
+}
